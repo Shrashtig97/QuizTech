@@ -1,0 +1,22 @@
+/* Add this to your existing CSS or in a separate CSS file */
+
+.quiz-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.quiz-item {
+    text-align: center;
+    width: 30%; /* Adjust the width as needed for the number of columns */
+    margin-bottom: 20px;
+}
+
+.quiz-item img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}

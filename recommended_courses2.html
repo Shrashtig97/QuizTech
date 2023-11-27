@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Recommendations</title>
+    <link rel="stylesheet" href="feedback_page2.css">
+</head>
+<body>
+    <header>
+        <h1>Course Recommendations</h1>
+    </header>
+
+    <nav>
+        <a href="#" class="nav-link" onclick="filterCourses('All')">All Courses</a>
+        <a href="#" class="nav-link" onclick="filterCourses('Web')">Web Development</a>
+        <a href="#" class="nav-link" onclick="filterCourses('Data Science')">Data Science</a>
+        <a href="#" class="nav-link" onclick="filterCourses('AI and ML')">AI and ML</a>
+    </nav>
+
+    <div class="container" id="courseContainer">
+        <!-- Course cards will be dynamically added here -->
+    </div>
+
+    <script>
+  const courses = [
+    { id: 1, name: 'Web Development Course', category: 'Web', Name: 'Apna College', link: 'https://www.youtube.com/watch?v=l1EssrLxt7E&list=PLfqMhTWNBTe3H6c9OGXb5_6wcc1Mca52n' },
+    { id: 2, name: 'Web Development Course for Beginners from Scratch', category: 'Web', Name: 'CodeWithHarry', link: 'https://www.youtube.com/watch?v=6mbwJ2xhgzM&list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg' },
+    { id: 3, name: 'Web Development Complete Course from Scratch', category: 'Web', Name: 'Coding Shuttle by Anuj Bhaiya', link: 'https://www.youtube.com/watch?v=9Y8iq5fDL38&list=PLhzIaPMgkbxDxVcH-M-JFM73PY1R_i2mK' },
+    { id: 4, name: 'Web Development Course exclusively for Delta Batch Students', category: 'Web', Name: 'Shraddha Didi from Microsoft', link: 'https://www.youtube.com/watch?v=YcUATrvgdAs&list=PLMkNGaPzzAymKPXnPTE-cHnIOqwLuVMgo' },
+    { id: 5, name: 'Data Science Full Course for Beginners', category: 'Data Science', Name: 'Simplilearn', link: 'https://youtu.be/-ETQ97mXXF0?si=twBgghr_XFp0nKPh' },
+    { id: 6, name: 'Data Science Full Course for Beginners with Python', category: 'Data Science', Name: 'CodeBasics', link: 'https://www.youtube.com/watch?v=JL_grPUnXzY&list=PLeo1K3hjS3us_ELKYSj_Fth2tIEkdKXvV' },
+    { id: 7, name: 'Data Science with Machine Learning Complete Course', category: 'Data Science', Name: 'Great Learning', link: 'https://www.youtube.com/watch?v=Vfo5le26IhY&list=PLlgLmuG_KgbaXMKcISC-fdz7HUn1oKr9i' },
+    { id: 8, name: 'Data Science Full Course', category: 'Data Science', Name: 'freeCodeCamp.org', link: 'https://www.youtube.com/watch?v=ua-CiDNNj30&list=PLWKjhJtqVAblQe2CCWqV4Zy3LY01Z8aF1' },
+    { id: 9, name: 'Harvard CS50’s Artificial Intelligence with Python – Full University Course', category: 'AI and ML', Name: 'freeCodeCamp.org', link: 'https://www.youtube.com/watch?v=5NgNicANyqM&pp=ygUjYXJ0aWZpY2lhbCBpbnRlbGxpZ2VuY2UgZnVsbCBjb3Vyc2U%3D' },
+    { id: 10, name: 'Artifical Intelligence Full Course in 10 Hours', category: 'AI and ML', Name: 'edureka!', link: 'https://www.youtube.com/watch?v=VOaoabf3LPM&pp=ygUjYXJ0aWZpY2lhbCBpbnRlbGxpZ2VuY2UgZnVsbCBjb3Vyc2U%3D' },
+    { id: 11, name: 'Machine Learning Complete Course', category: 'AI and ML', Name: '5 Minutes Engineering', link: 'https://www.youtube.com/watch?v=Y4qO9unerGs&list=PLYwpaL_SFmcBhOEPwf5cFwqo5B-cP9G4P' },
+    { id: 12, name: '100 Days of Machine Learning', category: 'AI and ML', Name: 'CampusX', link: 'https://www.youtube.com/watch?v=ZftI2fEz0Fw&list=PLKnIA16_Rmvbr7zKYQuBfsVkjoLcJgxHH' },
+    // Add more courses as needed
+];
+
+
+        function generateCourseCards(courses) {
+            const container = document.getElementById('courseContainer');
+            container.innerHTML = '';
+
+            courses.forEach(course => {
+                const card = document.createElement('div');
+                card.classList.add('blog-post');
+                card.innerHTML = `
+                    <div class="blog-content">
+                        <h2>${course.name}</h2>
+                        <p><strong>Category:</strong> ${course.category}</p>
+                        <p><strong>Taught By:</strong> ${course.Name}</p>
+                        <a href="${course.link}">
+                            <button style="background-color: red; color: white;">View Details</button>
+                        </a>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function filterCourses(category) {
+            const filteredCourses = category === 'All' ? courses : courses.filter(course => course.category === category);
+            generateCourseCards(filteredCourses);
+        }
+
+        // Initial page load
+        generateCourseCards(courses);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-Tech/Home</title>
+    <link rel="stylesheet" href="Blog.css">
+    <link href="Intro.css" rel="stylesheet">
+    <link href="Home.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Logo.png"/>
+    <!-- CSS FILES -->
+    <link href="home_page.css" rel="stylesheet">
+    <style>
+        /* Center the content inside .central-content */
+        .central-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Style the marquee tag */
+        .central-content p marquee {
+            font-size: 1.2em;
+            color: orange;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo img {
+            display: block; /* Remove any default inline styling on the image */
+        }
+        
+        .signup-link {
+            text-decoration: none; /* Remove underline from the link */
+            margin-left: 10px; /* Adjust the margin as needed for spacing between the logo and button */
+        }
+    </style>
+    <script src="client/src/App.js"></script>
+</head>
+
+<body>
+    <div>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <a href="Introduction.html">
+                        <img src="Logo.png" alt="Quiz-Tech" style="width: 90px; height: 90px;">
+                    </a>
+                </div>
+                <div class="buttons">
+                    <a href="registration.html" class="signup-link">
+                        <button class="signup-btn">Sign-In</button>
+                    </a>
+                </div>
+            </div>
+        </header>
+        
+    </div>
+
+    <!-- Content Section -->
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- CSS FILES -->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap"
+            rel="stylesheet">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+
+        <link href="css/owl.carousel.min.css" rel="stylesheet">
+
+        <link href="css/owl.theme.default.min.css" rel="stylesheet">
+
+        <link href="css/templatemo-medic-care.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <section class="section-padding" id="booking">
+            <div class="central-content">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12 mx-auto">
+                        <div class="booking-form">
+
+                            <h2 class="text-center mb-lg-3 mb-2">LOGIN</h2>
+                            <h2 class="text-center mb-lg-3 mb-2">Login to your account</h2>
+
+                            <form onsubmit="showMsg(0);return false;" method="post" action="signin01">
+                                <div class="row">
+
+                                    <div class="col-lg-6 col-12">
+                                        <input type="email" name="txtemail" id="email" pattern="[^ @]*@[^ @]*"
+                                            class="form-control" placeholder="Email address" required>
+                                    </div>
+
+                                    <div class="col-lg-6 col-12">
+                                        <input type="password" name="txtpass" id="password" class="form-control"
+                                            placeholder="password">
+                                    </div>
+
+
+                                    <div class="col-lg-3 col-md-4 col-6 mx-auto">
+                                        <div class="text-center">
+
+                                        </div>
+                                        <button type="button" class="form-control" id="submit-button" onclick="window.location.href='#'">Login</button>
+
+
+                                        <button><a href="http://localhost:3000">
+                                        Login With Google</a></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/owl.carousel.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+
+</html>
